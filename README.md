@@ -21,7 +21,7 @@ Linux: `source venv/bin/activate`
 Then `pip install -r requirements.txt`
 Commands to run Server
 `
-py manage.py runserver 7777
+py manage.py runserver 7777`
 
 `
 
