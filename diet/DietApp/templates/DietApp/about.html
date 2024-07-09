@@ -1,0 +1,123 @@
+{% extends 'partials/base.html' %}
+{% block title %}About SportyEats{% endblock %}
+
+{% block content %}
+<style>
+    /* Add your custom styles here */
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    section {
+        margin-bottom: 30px;
+        background-color: cornsilk;
+        padding: 10px;
+        box-shadow: 5px 5px 5px grey;
+    }
+
+    section:hover {
+        border-left: 10px solid black;
+    }
+
+    h2 {
+        color: #007BFF;
+        font-size: 17px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-decoration-color: aquamarine;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .input-data {
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    .data {
+        font-size: 18px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    .input-data,
+    .data {
+        color: #007BFF;
+        text-transform: capitalize;
+        text-shadow: aquamarine;
+        line-height: 10px;
+        margin: 10px;
+    }
+
+    strong {
+        font-size: 19px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 850;
+        text-decoration-color: azure;
+        color: cadetblue;
+    }
+</style>
+
+<header>
+    <h1 class="input-data">About SportyEats</h1>
+    <p class="data">Your Ultimate Nutrition and Fitness Companion</p>
+</header>
+
+<section>
+    <h2>Our Story</h2>
+    <p>At SportyEats, we believe that achieving your health and fitness goals should be an enjoyable and
+        personalized journey. Founded in [Year], our team of passionate individuals came together with a shared
+        vision: to create a platform that seamlessly integrates nutrition and fitness, making healthy living
+        accessible to everyone.</p>
+</section>
+
+<section>
+    <h2>Our Mission</h2>
+    <p><strong>Empowering Healthier Lifestyles</strong></p>
+    <p>Our mission is to empower individuals on their path to a healthier lifestyle. We understand that each person
+        is unique, and so are their health goals. SportyEats is designed to cater to your individual needs,
+        providing you with the tools and resources to make informed decisions about your nutrition and fitness.</p>
+</section>
+
+<section>
+    <h2>What Sets Us Apart</h2>
+    <p><strong>Innovative Technology, Personalized Solutions</strong></p>
+    <p>SportyEats stands out through its innovative use of technology to deliver personalized solutions. Our system
+        leverages cutting-edge algorithms and data analytics to offer tailored meal plans, workout routines, and
+        health insights. Whether you're a fitness enthusiast or just starting your wellness journey, SportyEats
+        adapts to your preferences and requirements.</p>
+    <!-- Add more content as needed -->
+</section>
+
+<section>
+    <h2>Our Commitment to You</h2>
+    <p><strong>Your Success is Our Success</strong></p>
+    <p>At SportyEats, your success is our top priority. We are committed to supporting you at every step of your
+        wellness journey. Our team of nutritionists, fitness experts, and tech enthusiasts is dedicated to
+        continually enhancing the SportyEats experience to meet your evolving needs.</p>
+
+    <p><strong>Community and Support</strong></p>
+    <p>Join a vibrant community of like-minded individuals who share the same passion for health and fitness.
+        Exchange tips, celebrate achievements, and find inspiration within the SportyEats community. We believe that
+        together, we can achieve more.</p>
+</section>
+
+<section>
+    <h2>Get Started Today!</h2>
+    <p>Embark on your journey to a healthier, happier you with SportyEats. Whether you're looking to lose weight,
+        build muscle, or simply adopt a more active lifestyle, we're here to guide you.</p>
+    <p>Thank you for choosing SportyEats. Your wellness adventure starts now!</p>
+</section>
+
+{% endblock %}

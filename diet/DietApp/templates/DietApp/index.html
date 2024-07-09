@@ -1,0 +1,35 @@
+{% extends 'partials/base.html' %}
+{% block title %}Home{% endblock %}
+{% load crispy_forms_tags %}
+
+
+
+{% block content %}
+
+<style>
+    .input-data {
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 900;
+        text-align: center;
+    }
+</style>
+
+<h2 class="input-data">Input Data</h2>
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input class="btn btn-info" type="submit" value="Predict Calories">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

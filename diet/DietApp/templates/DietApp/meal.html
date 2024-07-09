@@ -1,0 +1,60 @@
+{% extends 'partials/base.html' %}
+{% block title %}Home{% endblock %}
+{% load static %}
+
+{% block content %}
+<style>
+    .container {
+        width: 80%;
+        height: auto;
+        background-color: #E8E8E8;
+        margin-top: 10px;
+        box-shadow: 15px 15px 10px #404040;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    h2 {
+        font-size: 20px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: 900;
+    }
+
+    .meal-align {
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+        justify-content: space-between;
+        padding-right: 10px;
+        border-bottom: 2px solid #A9A9A9;
+
+    }
+</style>
+<h2 class="text-center al">Recommended Meal</h2>
+<div class="container">
+    <div class="card d-inline-flex p-2 mt-4 mb-2">
+        <img width="200" height="200" src="{% static closest_meal.img_url %}" class="card-img-top" alt="Meal Image">
+        <div class="card-body">
+            <h5 class="card-title">{{ closest_meal.meal_name }}</h5>
+            <p class="text-center">Meal content</p>
+            <p class="meal-align"><span class="attr">Carbohydrates:</span><span>{{ closest_meal.carbohydrates}}g</span>
+            </p>
+            <p class="card-text meal-align"><span class="attr">Protein:</span><span>{{ closest_meal.protein}} g</span>
+            </p>
+            <p class="card-text meal-align"><span class="attr">Fat:</span><span>{{ closest_meal.fat}} g</span></p>
+            <p class="card-text meal-align"><span class="attr">Calories:</span><span>{{ closest_meal.Calories}}
+                    Kcals</span></p>
+        </div>
+        <a class="btn btn-primary" type="submit" value="Pay Now">Pay Now</a>
+    </div>
+    <!-- <style>
+        .container {
+            min-width: 30vw;
+            max-width: 300px;
+        }
+    </style> -->
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+<div class="card d-inline-flex p-1 ml-3 mt-3" style="width: 18rem;">
+    <img width="200" height="200" src="{% static i.img_url %}" class="card-img-top" alt="Meal Image">
+    <div class="card-body">
+        <h5 class="card-title">{{ i.meal_name }}</h5>
+        <p class="card-text">Carbohydrates: {{ i.carbohydrates}} g</p>
+        <p class="card-text">Protein: {{ i.protein}} g</p>
+        <p class="card-text">Fat: {{ i.fat}} g</p>
+        <p class="card-text">Calories: {{ i.Calories}} Kcals</p>
+    </div>

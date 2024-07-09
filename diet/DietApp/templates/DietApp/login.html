@@ -1,0 +1,56 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}
+Log In
+{% endblock title %}
+
+
+{% block content %}
+<section class="mtb">
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="column is-half is-offset-one-quarter">
+
+            <div class="field">
+                <label class="label invert">Username:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Username" name="username">
+                </div>
+            </div>
+
+
+            <div class="field">
+                <label class="label invert">Password:</label>
+                <p class="control has-icons-left">
+                    <input class="input" type="password" placeholder="Password" name="password">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </p>
+            </div>
+
+            <div class="field is-grouped mt-4">
+                {% if request.GET.next %}
+                <input type="hidden" name="next" value="{{ request.GET.next }}">
+                {% endif %}
+                <div class="control">
+                    <button type="submit" class="button is-link">Continue</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link is-light">Cancel</button>
+                </div>
+            </div>
+
+            {% if form.errors %}
+            {% for error in form.errors %}
+            <p class="help is-danger" id="help">{{ error }}</p>
+            {% endfor %}
+            {% endif %}
+
+            <a href="{% url 'DietApp:register' %}">Register</a> &nbsp; | &nbsp;
+            <a href="{% url 'password_reset' %}" style="color: #00c4a7">Forgot Password?</a>
+        </div>
+    </form>
+</section>
+
+{% endblock content %}

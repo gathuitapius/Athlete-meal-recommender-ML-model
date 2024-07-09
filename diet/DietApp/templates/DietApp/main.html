@@ -1,0 +1,41 @@
+{% extends 'partials/base.html' %}
+{% block title %}www.AthletesMeals.com{% endblock %}
+{% load static %}
+
+<style>
+  /* .home {
+
+  } */
+
+  .txt {
+    position: absolute;
+    top: 20px;
+  }
+
+  .home img {
+    object-fit: fill;
+    z-index: -1;
+  }
+
+  .text {
+    margin-top: 10px;
+
+    font-size: 28px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+  }
+</style>
+
+{% block content %}
+
+
+<h1 class="text-center text ">Welcome To Meal Recommendation System</h1>
+<div class="home">
+  <img src="{% static 'images/dashboard.jpg' %}" style="height: 500px;" class="card-img-top w-100 img-thumbnail"
+    alt="Meal Image">
+  <p class="txt">Better Sports with SportyEats</p>
+</div>
+
+<p class="text-center text">Check out all your <a href="viewpredictions/">Previous Predictions</a></p>
+
+{% endblock %}

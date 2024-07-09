@@ -1,0 +1,26 @@
+{% extends 'partials/base.html' %}
+{% block title %}Home{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center al">Order Meal</h2>
+    <div class="card d-inline-flex p-2 mt-4 mb-2">
+        <img width="200" height="200" src="{% static closest_meal.img_url %}" class="card-img-top" alt="Meal Image">
+        <div class="card-body">
+            <h5 class="card-title">{{ closest_meal.meal_name }}</h5>
+            <p class="card-text">Carbohydrates: {{ closest_meal.carbohydrates}} g</p>
+            <p class="card-text">Protein: {{ closest_meal.protein}} g</p>
+            <p class="card-text">Fat: {{ closest_meal.fat}} g</p>
+            <p class="card-text">Calories: {{ closest_meal.Calories}} Kcals</p>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Pay Now">
+    </div>
+    <style>
+        .container {
+            min-width: 30vw;
+            max-width: 300px;
+        }
+    </style>
+</div>
+{% endblock %}
